@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/start.css') }}">
+        <script>
+            function myFunction(name) {
+                console.log('I was just clicked' +name);
+                window.location = "boss?bossname="+name+"&ort={{ortsname}}";
+            }
+        </script>
+        <script>
+            function myFunction2(name) {
+                console.log('I was just clicked' +name);
+                window.location = "funktionen?weiterleitungname="+name+"&ort={{ortsname}}";
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="wrapper">
+
+            <h2><strong>Alle Rocket Bosse<span>( 4 )</span></strong></h2>
+        
+            <div class="cards">
+        
+                <figure class="card" onclick="myFunction('Sierra')">
+        
+                    <img src="https://www.pokewiki.de/images/9/93/VS_Sierra_GO.png" />
+        
+                    <figcaption>Sierra</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction('Cliff')">
+        
+                    <img src="https://www.pokewiki.de/images/9/9e/VS_Cliff_GO.png" />
+        
+                    <figcaption>Cliff</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction('Arlo')">
+        
+                    <img src="https://www.pokewiki.de/images/6/63/VS_Arlo_GO.png" />
+        
+                    <figcaption>Arlo</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction('Giovanni')">
+        
+                    <img src="https://www.pokewiki.de/images/4/41/VS_Giovanni_GO.png" />
+        
+                    <figcaption>Giovanni</figcaption>
+        
+                </figure>
+        
+            </div>
+
+            <h2><strong>Map Funktionen<span>( 2 )</span></strong></h2>
+        
+            <div class="cards">
+        
+                <figure class="card" onclick="myFunction2('Quests')">
+        
+                    <img src="https://assets.thesilphroad.com/img/pogo-assets/QuestSymbol.png" />
+        
+                    <figcaption>Quests</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction2('Map')">
+        
+                    <img src="http://muxfunnz8xfl7psm.myfritz.net:5002/static/images/header/rocket.png" />
+        
+                    <figcaption>Map</figcaption>
+        
+                </figure>
+        
+                
+        
+            </div>
+
+            
+        {% if raids %}
+            <h2><strong>Raids</strong></h2>
+            <div class="news">
+            {%for i in raids%}
+  
+            <figure class="article">
+        
+                <img src={{i[0]}} />
+    
+                <figcaption>
+    
+                    <h3>{{i[1]}}</h3>
+    
+                    <p>{{i[2]}}</p>
+    
+                </figcaption>
+    
+            </figure>
+
+
+        {%endfor%}
+        </div>
+        {% endif %}
+        {% if news %}
+        <h2><strong>What's new?</strong></h2>
+        <div class="news">
+        {%for i in news%}
+
+        <figure class="article">
+    
+            <img src={{i[0]}} />
+
+            <figcaption>
+
+                <h3>{{i[1]}}</h3>
+
+                <p>{{i[2]}}</p>
+
+            </figcaption>
+
+        </figure>
+
+
+    {%endfor%}
+    </div>
+    {% endif %}   
+        
+        </div>
+        
+    </body>
+</html>

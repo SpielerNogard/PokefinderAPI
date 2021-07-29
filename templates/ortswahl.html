@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/start.css') }}">
+        <script>
+            function myFunction(name) {
+                console.log('I was just clicked' +name);
+                window.location = "auswahl?ortsname="+name;
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="wrapper">
+
+            <h2><strong>Ünterstützte Orte<span>( 12 )</span></strong></h2>
+        
+            <div class="cards">
+        
+                <figure class="card" onclick="myFunction('Köthen')">
+        
+                    <img src="https://i.postimg.cc/nLX7TXxw/imageonline-co-textimage.png" />
+        
+                    <figcaption>Köthen</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction('Dessau')">
+        
+                    <img src="https://i.postimg.cc/FsnHpDKN/imageonline-co-textimage-2.png" />
+        
+                    <figcaption>Dessau</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction('Aken')">
+        
+                    <img src="https://i.postimg.cc/vZQC1sym/imageonline-co-textimage-3.png" />
+        
+                    <figcaption>Aken</figcaption>
+        
+                </figure>
+        
+                <figure class="card" onclick="myFunction('Edderitz')">
+        
+                    <img src="https://i.postimg.cc/jSg3Lnv8/imageonline-co-textimage-5.png" />
+        
+                    <figcaption>Edderitz</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Lübben')">
+        
+                    <img src="https://i.postimg.cc/ry1h5PQR/imageonline-co-textimage-6.png" />
+        
+                    <figcaption>Lübben</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Luckau')">
+        
+                    <img src="https://i.postimg.cc/2SMdsQ0f/imageonline-co-textimage-7.png" />
+        
+                    <figcaption>Luckau</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Schönewalde')">
+        
+                    <img src="https://i.postimg.cc/PqbLSYcy/imageonline-co-textimage-8.png" />
+        
+                    <figcaption>Schönewalde</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Golssen')">
+        
+                    <img src="https://i.postimg.cc/XYkG89t8/imageonline-co-textimage-9.png" />
+        
+                    <figcaption>Golssen</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Alt Golssen')">
+        
+                    <img src="https://i.postimg.cc/2yW3BW4n/imageonline-co-textimage-10.png" />
+        
+                    <figcaption>Alt Golssen</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Könnern')">
+        
+                    <img src="https://i.postimg.cc/FRMHmK2z/imageonline-co-textimage-11.png" />
+        
+                    <figcaption>Könnern</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Krosigk')">
+        
+                    <img src="https://i.postimg.cc/FK1rLcv1/imageonline-co-textimage-12.png" />
+        
+                    <figcaption>Krosigk</figcaption>
+        
+                </figure>
+
+                <figure class="card" onclick="myFunction('Tropical Island')">
+        
+                    <img src="https://www.tropical-islands.de/2020_TI_logo-rs.png" />
+        
+                    <figcaption>Tropical Island</figcaption>
+        
+                </figure>
+
+            </div>
+        </div>
+        
+    </body>
+</html>

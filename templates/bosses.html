@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/bosses.css') }}">
+    </head>
+    <body>
+        {% if fantasie %}
+        {%for i in fantasie%}
+  
+        <div class="blog-card">
+            <div class="meta">
+              <div class="photo" style="background-image: url({{i[9]}})"></div>
+              
+            </div>
+            <div class="description">
+              <h1>{{i[8]}}</h1>
+              <h2>Pokemon Boss {{bossname}}</h2>
+              <p>Start: {{i[10]}}</p>
+              <p>Ende: {{i[11]}}</p>
+              <p><a href="http://maps.google.com/maps?q={{i[2]}},{{i[3]}}">Google Maps</a></p>
+              <p><a href="http://maps.apple.com/maps?daddr={{i[2]}},{{i[3]}}&z=10&t=s&dirflg=w">Apple Maps</a></p>
+              
+                
+            </div>
+          </div>
+
+
+        {%endfor%}
+        {% else %}
+        <h1>Keine Stops gefunden</h1>
+        {% endif %}
+        
+
+    </body>
+</html>
